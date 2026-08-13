@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Walrus Media portfolio: content marketing campaigns across marine, automotive, hospitality, and lifestyle brands." />
+  <title>Work | Walrus Media</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    #grain {
+      position: fixed; inset: 0;
+      pointer-events: none; z-index: 8000;
+      opacity: 0.03; mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px;
+      animation: grain-shift 0.4s steps(1) infinite;
+    }
+    @keyframes grain-shift {
+      0%   { background-position: 0 0; }
+      25%  { background-position: -8% 4%; }
+      50%  { background-position: 4% -8%; }
+      75%  { background-position: 8% 6%; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Walrus Media</a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="about.html" class="nav__link">About</a></li>
+      <li><a href="work.html" class="nav__link active">Work</a></li>
+      <li><a href="services.html" class="nav__link">Services</a></li>
+      <li><a href="contact.html" class="nav__link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav__cta">Book a Call</a>
+    <button class="nav__burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav__mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav>
+    <ul class="nav__mobile-links" role="list">
+      <li><a href="index.html" class="nav__mobile-link">Home</a></li>
+      <li><a href="about.html" class="nav__mobile-link">About</a></li>
+      <li><a href="work.html" class="nav__mobile-link active">Work</a></li>
+      <li><a href="services.html" class="nav__mobile-link">Services</a></li>
+      <li><a href="contact.html" class="nav__mobile-link">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav__mobile-cta"><a href="contact.html" class="btn btn-primary">Book a Free Strategy Call</a></div>
+  <div class="nav__mobile-social">
+    <a href="https://www.instagram.com/walrusmedia_videography" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.tiktok.com/@gus_beef" target="_blank" rel="noopener">TikTok</a>
+    <a href="https://www.youtube.com/@angusVisuals" target="_blank" rel="noopener">YouTube</a>
+  </div>
+</div>
+
+<header class="page-hero">
+  <div class="container">
+    <p class="label" data-reveal>Our work</p>
+    <h1 class="display-2" data-reveal data-delay="1">Content built<br />to <em>perform.</em></h1>
+  </div>
+</header>
+
+<section style="padding-top: 4rem;" aria-label="Portfolio grid">
+  <div class="container">
+    <div class="portfolio__filters" role="group" aria-label="Filter by category" data-reveal>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="marine">Marine</button>
+      <button class="filter-btn" data-filter="automotive">Automotive</button>
+      <button class="filter-btn" data-filter="hospitality">Hospitality</button>
+      <button class="filter-btn" data-filter="lifestyle">Lifestyle</button>
+      <button class="filter-btn" data-filter="photography">Photography</button>
+    </div>
+
+    <div class="portfolio__grid">
+      <article class="portfolio-card" data-category="marine" data-orientation="horizontal" data-reveal>
+        <video class="portfolio-card__thumb" src="assets/work/oceansouth-drone.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Marine</span><h2 class="portfolio-card__title">Oceansouth Brand Film</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="automotive" data-orientation="vertical" data-reveal data-delay="1">
+        <video class="portfolio-card__thumb" src="assets/work/kaizen-bike.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Automotive</span><h2 class="portfolio-card__title">Kaizen Social Reel</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="hospitality" data-orientation="horizontal" data-reveal>
+        <video class="portfolio-card__thumb" src="assets/work/nest-cafe.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Hospitality</span><h2 class="portfolio-card__title">The Nest Cafe Brand Story</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="automotive" data-orientation="vertical" data-reveal data-delay="1">
+        <video class="portfolio-card__thumb" src="assets/work/aston-martin.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Automotive</span><h2 class="portfolio-card__title">Aston Martin Short</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="marine" data-orientation="vertical" data-reveal>
+        <video class="portfolio-card__thumb" src="assets/work/marine-openwater.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Marine</span><h2 class="portfolio-card__title">Open Water Reel</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="automotive" data-orientation="vertical" data-reveal data-delay="1">
+        <video class="portfolio-card__thumb" src="assets/work/ferrari.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Automotive</span><h2 class="portfolio-card__title">Ferrari Short</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="lifestyle" data-orientation="square" data-span="2" data-reveal data-delay="2">
+        <video class="portfolio-card__thumb" src="assets/work/nz-drink.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Lifestyle</span><h2 class="portfolio-card__title">Travel Content</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="automotive" data-orientation="horizontal" data-reveal data-delay="2">
+        <video class="portfolio-card__thumb" src="assets/work/holden-fb.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Automotive</span><h2 class="portfolio-card__title">Holden FB Short</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="lifestyle" data-orientation="horizontal" data-reveal>
+        <video class="portfolio-card__thumb" src="assets/work/wedding-zoe.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Lifestyle</span><h2 class="portfolio-card__title">Wedding Film</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="lifestyle" data-orientation="horizontal" data-reveal>
+        <video class="portfolio-card__thumb" src="assets/work/sydney-westside.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Lifestyle</span><h2 class="portfolio-card__title">Film Emulation</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal>
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-coastal-portrait.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Editorial Portrait</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal data-delay="1">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-mountain-sunset.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Landscape</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal>
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-silhouette-sunset.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Golden Hour</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal data-delay="1">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-beach-portrait.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Lifestyle Portrait</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal data-delay="2">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-bonfire.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Available Light</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal>
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-motorcycle-night.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Automotive Portrait</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal data-delay="1">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-motocross.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Action &amp; Sport</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal data-delay="2">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-lifestyle-portrait.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Youth &amp; Lifestyle</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal>
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-nepal-temple.jpg'); background-size: cover; background-position: center top;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Travel Photography</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="horizontal" data-reveal data-delay="1">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-nepal-stupa.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Editorial Travel</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal>
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-drone-sky.jpg'); background-size: cover; background-position: center;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Aerial Photography</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+
+      <article class="portfolio-card" data-category="photography" data-orientation="vertical" data-reveal data-delay="1">
+        <div class="portfolio-card__thumb" style="background-image: url('assets/work/photos/photo-golden-hour-portrait.jpg'); background-size: cover; background-position: center top;"></div>
+        <div class="portfolio-card__overlay"><span class="portfolio-card__cat">Photography</span><h2 class="portfolio-card__title">Golden Hour Portrait</h2><span class="portfolio-card__cta">View Project →</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-section__inner">
+      <p class="label cta-section__eyebrow" data-reveal>Let's get to work</p>
+      <h2 class="display-2 cta-section__title" data-reveal data-delay="1">Your brand<br />could be <em>next.</em></h2>
+      <div class="cta-section__actions" data-reveal data-delay="2">
+        <a href="contact.html" class="btn btn-primary btn-arrow">Book a Free Strategy Call</a>
+        <a href="services.html" class="btn btn-outline btn-arrow">See Our Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div><a href="index.html" class="footer__logo">Walrus Media</a><p class="footer__tagline">Content marketing that builds brands. Cinematic video, photography, and drone — Melbourne-based, operating nationwide.</p><div class="footer__social"><a href="https://www.instagram.com/walrusmedia_videography" target="_blank" rel="noopener" class="footer__social-link" aria-label="Instagram">Instagram</a><a href="https://www.tiktok.com/@gus_beef" target="_blank" rel="noopener" class="footer__social-link" aria-label="TikTok">TikTok</a><a href="https://www.youtube.com/@angusVisuals" target="_blank" rel="noopener" class="footer__social-link" aria-label="YouTube">YouTube</a></div></div>
+      <div><p class="footer__col-title">Navigate</p><ul class="footer__nav-links" role="list"><li><a href="index.html" class="footer__nav-link">Home</a></li><li><a href="about.html" class="footer__nav-link">About</a></li><li><a href="work.html" class="footer__nav-link">Work</a></li><li><a href="services.html" class="footer__nav-link">Services</a></li><li><a href="contact.html" class="footer__nav-link">Contact</a></li></ul></div>
+      <div><p class="footer__col-title">Get in touch</p><p class="footer__contact-item"><a href="tel:0407690346">0407 690 346</a></p><p class="footer__contact-item"><a href="mailto:walrusmedia.studio@gmail.com">walrusmedia.studio@gmail.com</a></p><p class="footer__contact-item">Melbourne, Victoria, Australia</p></div>
+    </div>
+    <div class="footer__bottom"><span>ABN: 15 935 547 290</span><span>© 2026 Walrus Media. All rights reserved.</span></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
