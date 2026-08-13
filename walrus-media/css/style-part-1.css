@@ -408,3 +408,95 @@ em { font-style: italic; color: inherit; opacity: 0.75; }
 }
 
 .hero__sub {
+  max-width: 460px;
+  margin-bottom: 2.75rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealUp 0.8s var(--ease-out) 0.85s forwards;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealUp 0.8s var(--ease-out) 1.05s forwards;
+}
+
+/* Portrait photo — right side of hero */
+.hero__portrait {
+  position: absolute;
+  top: 0; right: 0;
+  width: 62%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url('assets/hero-portrait.jpg');
+  background-size: cover;
+  background-position: center top;
+}
+
+/* Fade left edge so text stays readable */
+.hero__portrait::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 60%;
+  background: linear-gradient(to right, var(--bg) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Fade bottom edge */
+.hero__portrait::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to top, var(--bg) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Text stays left — max width prevents bleed into portrait */
+.hero__left-wrap {
+  max-width: 100%; /* mobile: full width */
+}
+
+@media (max-width: 767px) {
+  /* Portrait fades behind content on mobile */
+  .hero__portrait {
+    width: 100%;
+    opacity: 0.3;
+  }
+}
+
+/* Scroll indicator — desktop only */
+.hero__scroll {
+  display: none;
+  position: absolute;
+  bottom: 2.5rem;
+  right: var(--container-px);
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  opacity: 0;
+  animation: revealUp 0.8s var(--ease-out) 1.5s forwards;
+}
+
+.hero__scroll-line {
+  width: 1px;
+  height: 52px;
+  background: linear-gradient(to bottom, var(--text-muted), transparent);
+  animation: scrollPulse 2.4s ease-in-out infinite;
+}
+
+.hero__scroll span {
+  font-size: 0.5rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  writing-mode: vertical-lr;
+}
+
+/* ==========================================================================
